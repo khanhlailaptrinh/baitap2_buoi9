@@ -1,0 +1,32 @@
+
+let fullName = "Nguyen Van Binh";
+let studentId = "27A4041234";
+
+
+let arr = fullName.toLowerCase().split(" ");
+let lastName = arr[arr.length - 1];
+let firstLetters = "";
+
+for (let i = 0; i < arr.length - 1; i++) {
+  firstLetters += arr[i][0];
+}
+
+let email = lastName + firstLetters + "." + studentId.toLowerCase() + "@hvnh.edu.vn";
+
+
+let coursePeriod = "K27";
+let faculty = "CNTT";
+
+
+let last4 = studentId.slice(-4);
+let sum = 0;
+
+for (let i = 0; i < last4.length; i++) {
+  sum += Number(last4[i]);
+}
+
+
+console.log("Email:", email);
+console.log(
+  `Xin chao ${fullName}, ban la sinh vien khoa ${coursePeriod}, khoa ${faculty}, tong 4 so cuoi la ${sum}`
+);
